@@ -1,7 +1,7 @@
 import { IMiddleware, IHttpRequest, IHttpResponse } from '@/presentation/protocols'
 import { IModelRepository } from '@/presentation/utils'
 import { forbidden, serverError, ok } from '@/presentation/helpers/http-helpers'
-import { AccessDeniedError } from '@/presentation/controllers/errors'
+import { AccessDeniedError } from '@/presentation/errors'
 
 export class IsAuth implements IMiddleware {
   constructor (

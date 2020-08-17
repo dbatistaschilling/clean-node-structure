@@ -1,6 +1,6 @@
 
-import { IHttpResponse } from './../protocols'
-import { ServerError, UnauthorizedError } from '../controllers/errors'
+import { IHttpResponse } from '../protocols'
+import { ServerError, UnauthorizedError } from '../errors'
 
 export const badRequest = (error: Error): IHttpResponse => ({
   statusCode: 400,

@@ -1,5 +1,6 @@
+import 'module-alias/register'
 import env from './config/env'
-import DatabaseConnectionAdapter from '../infra/mongodb/database-connection-adapter'
+import DatabaseConnectionAdapter from '@/infra/mongodb/database-connection-adapter'
 
 DatabaseConnectionAdapter.connect(env.mongoUrl)
   .then(async () => {

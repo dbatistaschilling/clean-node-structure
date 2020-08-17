@@ -1,5 +1,5 @@
 import { IMiddleware } from '@/presentation/protocols'
-import { IsAuth } from '@/infra/middleware/is-auth'
+import { IsAuth } from '../middlewares/is-auth'
 import { ModelRepositoryAdapter } from '@/infra/mongodb/model-repository-adapter'
 
 export const makeIsAuth = (role?: string): IMiddleware => {

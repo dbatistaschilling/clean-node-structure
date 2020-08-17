@@ -1,4 +1,4 @@
-import { IModelRepository } from '../../presentation/utils'
+import { IModelRepository } from '@/presentation/utils'
 
 export class ModelRepositoryAdapter implements IModelRepository {
   repositoryResponse (_doc: any): any {

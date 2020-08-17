@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import { IDatabase } from '../../presentation/utils'
+import { IDatabase } from '@/presentation/utils'
 
 class DatabaseConnectionAdapter implements IDatabase {
   async connect (uri: string): Promise<any> {

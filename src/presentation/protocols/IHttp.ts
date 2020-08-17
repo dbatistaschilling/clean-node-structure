@@ -1,9 +1,11 @@
-export interface IHttpResponse {
+export type IHttpResponse = {
   statusCode: number
   body: any
 }
 
-export interface IHttpRequest {
+export type IHttpRequest = {
   body?: any
   headers?: any
+  params?: any
+  accountId?: string
 }
