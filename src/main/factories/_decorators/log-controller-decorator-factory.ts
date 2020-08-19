@@ -1,8 +1,8 @@
 import { LogControllerDecorator } from '@/presentation/decorators/log-controller-decorator'
-import { ModelRepositoryAdapter } from '@/infra/mongodb/model-repository-adapter'
 import { IController } from '@/presentation/protocols'
+import { SaveAdapter } from '@/infra/mongodb/mongorepository'
 
 export const makeLogControllerDecorator = (controller: IController): IController => {
-  const modelRepositoryAdapter = new ModelRepositoryAdapter()
-  return new LogControllerDecorator(controller, modelRepositoryAdapter)
+  const saveAdapter = new SaveAdapter()
+  return new LogControllerDecorator(controller, saveAdapter)
 }

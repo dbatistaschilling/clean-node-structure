@@ -1,11 +1,11 @@
 import { IMiddleware, IHttpRequest, IHttpResponse } from '@/presentation/protocols'
-import { IModelRepository } from '@/presentation/utils'
+import { IFindOne } from '@/presentation/utils'
 import { forbidden, serverError, ok } from '@/presentation/helpers/http-helpers'
 import { AccessDeniedError } from '@/presentation/errors'
 
 export class IsAuth implements IMiddleware {
   constructor (
-    private readonly loadAccountByToken: IModelRepository,
+    private readonly loadAccountByToken: IFindOne,
     private readonly role?: string
   ) {}
 

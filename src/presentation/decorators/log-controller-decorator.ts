@@ -1,10 +1,10 @@
 import { IController, IHttpRequest, IHttpResponse } from '../protocols'
-import { IModelRepository } from '../utils'
+import { ISave } from '../utils'
 
 export class LogControllerDecorator implements IController {
   constructor (
     private readonly controller: IController,
-    private readonly logErrorRepository: IModelRepository
+    private readonly logErrorRepository: ISave
   ) {}
 
   async handle (httpRequest: IHttpRequest): Promise<IHttpResponse> {

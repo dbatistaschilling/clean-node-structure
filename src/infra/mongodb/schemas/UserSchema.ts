@@ -4,6 +4,10 @@ const Schema = mongoose.Schema
 export const userSchema = {
   type: 'object',
   properties: {
+    id: {
+      type: 'string',
+      required: true
+    },
     name: {
       type: 'string',
       required: true
