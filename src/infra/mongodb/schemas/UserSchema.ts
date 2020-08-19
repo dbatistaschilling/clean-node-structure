@@ -24,8 +24,7 @@ export const userSchema = {
       type: 'string',
       required: true
     }
-  },
-  required: ['accessToken', 'name']
+  }
 }
 
 export default mongoose.model('User', new Schema(userSchema.properties))
